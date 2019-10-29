@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey:''
+      apiKey:'AIzaSyAmudlGxzT9IFD9PgRYygWwLyY2KMg32jM'
     })
   ],
   providers: [
