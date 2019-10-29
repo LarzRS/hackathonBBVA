@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SucService} from 'src/service/suc.service';
 
 @Component({
   selector: 'app-sucursal',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SucursalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private sucService: SucService
+  ) { }
 
   ngOnInit() {
+    console.log("Funciona");
+
+    this.sucService.obtenerSucursal()
+    .subscribe(
+      data => {
+        console.log(data);
+      }
+    );
   }
 
 }
