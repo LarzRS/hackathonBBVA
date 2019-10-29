@@ -1,0 +1,4 @@
+recursive-include bbva/public *
+include bbva/public/favicon.ico
+recursive-include bbva/i18n *
+recursive-include bbva/templates *
