@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AtmComponent } from './atm/atm.component';
 import { SucursalComponent } from './sucursal/sucursal.component';
+import { AtmService } from 'src/service/atm.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,12 @@ import { SucursalComponent } from './sucursal/sucursal.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AtmService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
