@@ -12,10 +12,11 @@ export class AtmService {
   ) { }
 
   obtenerATM() {
-    let headers = new HttpHeaders();
-    headers.set('Authorization', this.token);
-    headers.set('Accept', 'application/json');
-    console.log("ATM");
+    let headers = new HttpHeaders({
+      'authorization': this.token,
+      'accept': 'application/json'
+    });
+    console.log("ATM", headers);
     return this.http.get<any>(this.url, { headers: headers });
   }
 }
