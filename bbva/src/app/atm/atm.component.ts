@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AtmService } from 'src/service/atm.service';
 
 @Component({
   selector: 'app-atm',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AtmComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private atmService: AtmService
+  ) { }
 
   ngOnInit() {
+    console.log("HOLA");
+
+    this.atmService.obtenerATM()
+    .subscribe(
+      data => {
+        console.log(data);
+      }
+    );
   }
 
 }
